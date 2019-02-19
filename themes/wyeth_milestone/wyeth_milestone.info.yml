@@ -1,11 +1,16 @@
 name: Wyeh milestone
 type: theme
-base theme: stable
+base theme: 
 Description: "Wyeth milestone revamp"
 package: custom
 core: 8.x
+
 libraries:
   - wyeth_milestone/global-assets
+  - wyeth_milestone/homepage-assets
+
+libraries-override:
+  system/base: false
 
 regions:
   primary_menu: 'Primary menu'

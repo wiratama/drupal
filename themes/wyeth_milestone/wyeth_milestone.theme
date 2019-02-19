@@ -1,0 +1,13 @@
+<?php
+function hook_page_attachments_alter(array &$attachments) {
+  if (in_array('core/jquery', $attachments['#attached']['library'])) {
+    $index = array_search('core/jquery', $attachments['#attached']['library']);
+    unset($attachments['#attached']['library'][$index]);
+  }
+}
+
+function wyeth_milestone_preprocess_page(&$variables) {
+  if ($variables['is_front']) {
+    $variables['#attached']['library'][] = 'wyeth_milestone/homepage-assets';
+  }
+}
