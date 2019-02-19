@@ -1,0 +1,23 @@
+global-assets:
+  version: VERSION
+  css:
+    theme:
+      css/wy-global.css: {}
+      css/cropper.css: {}
+  js:
+    theme:
+      js/jquery-3.2.1.min.js {}
+      js/popper.min.js {}
+      js/bootstrap.min.js {}
+      js/bootstrap-select.min.js {}
+      js/swiper.min.js {}
+      js/ofi.min.js {}
+      js/moment.js {}
+      js/moment-timezone.js {}
+      js/bootstrap-datepicker.min.js {}
+      js/bootstrap-datepicker.id.min.js {}
+      js/cropper.js {}
+      js/simple-ajax-uploader.js {}
+      js/fe.js {}
+      js/milestone-input.js {}
+      js/milestone.js {}
