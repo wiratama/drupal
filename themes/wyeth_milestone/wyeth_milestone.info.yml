@@ -1,6 +1,6 @@
 name: Wyeh milestone
 type: theme
-base theme: 
+base theme: false
 Description: "Wyeth milestone revamp"
 package: custom
 core: 8.x

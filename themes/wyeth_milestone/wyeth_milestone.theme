@@ -1,7 +1,7 @@
 <?php
 function hook_page_attachments_alter(array &$attachments) {
-  if (in_array('core/jquery', $attachments['#attached']['library'])) {
-    $index = array_search('core/jquery', $attachments['#attached']['library']);
+  if (in_array('core/drupal.dialog.off_canvas', $attachments['#attached']['library'])) {
+    $index = array_search('core/drupal.dialog.off_canvas', $attachments['#attached']['library']);
     unset($attachments['#attached']['library'][$index]);
   }
 }

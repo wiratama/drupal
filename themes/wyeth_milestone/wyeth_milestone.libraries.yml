@@ -26,3 +26,5 @@ homepage-assets:
   css:
     theme:
       css/p-homepage.css: {}
+  js:
+    js/pages/homepage.js: {}
