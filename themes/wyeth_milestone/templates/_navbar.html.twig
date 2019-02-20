@@ -1,0 +1,190 @@
+<nav id="mainNavbar">
+  <div class="container c-inner">
+    <button class="navbar-toggler" type="button" id="mainNavbarToggler" data-toggle="collapse" data-target="#mainNavbarContent" aria-controls="mainNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="index.php"><img src="{{ directory }}/images/parenting-club.png" alt=""><span class="sr-only">Parenting Club</span></a>
+    <button id="searchToggleMobile" data-toggle="collapse" data-target="#mainNavbarContent" aria-controls="mainNavbarContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-search" aria-hidden="true"></i></button>
+    <div class="acc">
+      <a href="#" class="acc-img">
+        <img src="{{ directory }}/images/acc-na.png" alt="">
+      </a>
+      <div class="acc-opt">
+        {% if logged_in %}
+          <a href="#" class="acc-login-link">Welcome {{ user.displayname }}</a>
+        {% else %}
+          <a href="#" class="acc-login-link" data-toggle="modal" data-target="#puLoginRegister">Login</a>
+          <a href="#" class="acc-register-link" data-toggle="modal" data-target="#puLoginRegister">Register</a>
+        {% endif %}
+      </div>
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="mainNavbarContent">
+      <a class="navbar-brand" href="index.php"><img src="{{ directory }}/images/parenting-club.png" alt=""></a>
+      <button class="navbar-toggler" type="button" id="mainNavbarCloser" data-toggle="collapse" data-target="#mainNavbarContent" aria-controls="mainNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span>&times;</span>
+      </button>
+      <div class="search hidden-lg-up">
+        <form class="searchbox">
+          <input type="search" placeholder="Search......" name="search" class="searchbox-input">
+          <button class="searchbox-submit" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+      </div>
+
+      <ul id="mainNav">
+        <li class="active">
+          <a href="#">Prakehamilan</a>
+          <ul>
+            <li>
+              <a href="#">Prakehamilan</a>
+            </li>
+            <li>
+              <a href="#">Persiapan Kehamilan</a>
+            </li>
+            <li>
+              <a href="#">Prakonsepsi</a>
+            </li>
+            <li>
+              <a href="#">Apakah Saya Hamil</a>
+            </li>
+            <li>
+              Tools
+            </li>
+            <li>
+              <a href="#">Smart Ovulation Calendar</a>
+            </li>
+            <li>
+              <a href="#">Smart Nursery Calendar</a>
+            </li>
+            <li>
+              <a href="#">Smart Consultation</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Kehamilan</a>
+          <ul>
+            <li>
+              <a href="#">Prakehamilan</a>
+            </li>
+            <li>
+              <a href="#">Persiapan Kehamilan</a>
+            </li>
+            <li>
+              <a href="#">Prakonsepsi</a>
+            </li>
+            <li>
+              <a href="#">Apakah Saya Hamil</a>
+            </li>
+            <li class="sub">
+              Kehamilan
+            </li>
+            <li>
+              <a href="#">Smart Ovulation Calendar</a>
+            </li>
+            <li>
+              <a href="#">Smart Nursery Calendar</a>
+            </li>
+            <li>
+              <a href="#">Smart Consultation</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Bayi</a>
+          <ul>
+            <li>
+              <a href="#">Prakehamilan</a>
+            </li>
+            <li>
+              <a href="#">Persiapan Kehamilan</a>
+            </li>
+            <li>
+              <a href="#">Prakonsepsi</a>
+            </li>
+            <li>
+              <a href="#">Apakah Saya Hamil</a>
+            </li>
+            <li class="sub">
+              Bayi
+            </li>
+            <li>
+              <a href="#">Smart Ovulation Calendar</a>
+            </li>
+            <li>
+              <a href="#">Smart Nursery Calendar</a>
+            </li>
+            <li>
+              <a href="#">Smart Consultation</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Anak</a>
+          <ul>
+            <li>
+              <a href="#">Anak</a>
+            </li>
+            <li>
+              <a href="#">Persiapan Kehamilan</a>
+            </li>
+            <li>
+              <a href="#">Prakonsepsi</a>
+            </li>
+            <li>
+              <a href="#">Apakah Saya Hamil</a>
+            </li>
+            <li class="sub">
+              Pra-kehamilan
+            </li>
+            <li>
+              <a href="#">Smart Ovulation Calendar</a>
+            </li>
+            <li>
+              <a href="#">Smart Nursery Calendar</a>
+            </li>
+            <li>
+              <a href="#">Smart Consultation</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="acc-info">
+        <p>Join parenting club to get all benefit</p>
+        {% if logged_in %}
+          <a href="#" class="btn btn-emas acc-register-link">Welcome</a>
+        {% else %}
+          <a href="#" class="btn btn-emas acc-register-link" data-toggle="modal" data-target="#puLoginRegister">Register</a>
+          <a href="#" class="btn btn-primary acc-login-link" data-toggle="modal" data-target="#puLoginRegister">Sign In</a>
+        {% endif %}
+      </div>
+      <div class="nav-social">
+        <p>Connect with us</p>
+        <a href="#" class="btn btn-facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Facebook</span></a>
+        <a href="#" class="btn btn-twitter"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
+        <a href="#" class="btn btn-youtube"><i class="fa-youtube" aria-hidden="true"></i><span class="sr-only">Youtube</span></a>
+        <a href="#" class="btn btn-instagram"><i class="fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a>
+      </div>
+      <div class="search hidden-md-down">
+
+        <form class="searchbox">
+          <!-- <select class="bs-search" data-live-search="true" title='<i class="fa fa-search" aria-hidden="true"></i>' data-style="searchbox-submit">
+            <option>Hot Dog, Fries and a Soda</option>
+            <option>Hot Dog and Potato wedges</option>
+            <option>Burger, Shake and a Smile</option>
+            <option>Sugar, Spice and all things nice</option>
+          </select> -->
+          <input type="search" placeholder="Search......" name="search" class="searchbox-input">
+          <ul>
+            <li>lorem</li>
+            <li>ipsum</li>
+            <li>dolor</li>
+          </ul>
+          <button class="searchbox-submit" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>

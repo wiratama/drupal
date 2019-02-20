@@ -1,0 +1,16 @@
+default_layout:
+  label: 'Default'
+  category: 'My Layouts'
+  template: templates/default
+  default_region: main
+  regions:
+    main:
+      label: Main content
+reg_layout:
+  label: 'Register layout'
+  category: 'My Layouts'
+  template: templates/reg_layout
+  default_region: main
+  regions:
+    main:
+      label: Main content

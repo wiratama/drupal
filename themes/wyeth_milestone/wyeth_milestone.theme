@@ -10,4 +10,6 @@ function wyeth_milestone_preprocess_page(&$variables) {
   if ($variables['is_front']) {
     $variables['#attached']['library'][] = 'wyeth_milestone/homepage-assets';
   }
+  
+  $variables['displayname'] = \Drupal::currentUser()->getUsername();
 }
