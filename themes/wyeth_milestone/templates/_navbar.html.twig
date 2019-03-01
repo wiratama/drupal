@@ -3,7 +3,10 @@
     <button class="navbar-toggler" type="button" id="mainNavbarToggler" data-toggle="collapse" data-target="#mainNavbarContent" aria-controls="mainNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="index.php"><img src="{{ directory }}/images/parenting-club.png" alt=""><span class="sr-only">Parenting Club</span></a>
+    <a class="navbar-brand" href="index.php">
+      <img src="{{ directory }}/images/parenting-club.png" alt="">
+      <span class="sr-only">Parenting Club</span>
+    </a>
     <button id="searchToggleMobile" data-toggle="collapse" data-target="#mainNavbarContent" aria-controls="mainNavbarContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-search" aria-hidden="true"></i></button>
     <div class="acc">
       <a href="#" class="acc-img">
@@ -32,124 +35,7 @@
         </form>
       </div>
 
-      <ul id="mainNav">
-        <li class="active">
-          <a href="#">Prakehamilan</a>
-          <ul>
-            <li>
-              <a href="#">Prakehamilan</a>
-            </li>
-            <li>
-              <a href="#">Persiapan Kehamilan</a>
-            </li>
-            <li>
-              <a href="#">Prakonsepsi</a>
-            </li>
-            <li>
-              <a href="#">Apakah Saya Hamil</a>
-            </li>
-            <li>
-              Tools
-            </li>
-            <li>
-              <a href="#">Smart Ovulation Calendar</a>
-            </li>
-            <li>
-              <a href="#">Smart Nursery Calendar</a>
-            </li>
-            <li>
-              <a href="#">Smart Consultation</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Kehamilan</a>
-          <ul>
-            <li>
-              <a href="#">Prakehamilan</a>
-            </li>
-            <li>
-              <a href="#">Persiapan Kehamilan</a>
-            </li>
-            <li>
-              <a href="#">Prakonsepsi</a>
-            </li>
-            <li>
-              <a href="#">Apakah Saya Hamil</a>
-            </li>
-            <li class="sub">
-              Kehamilan
-            </li>
-            <li>
-              <a href="#">Smart Ovulation Calendar</a>
-            </li>
-            <li>
-              <a href="#">Smart Nursery Calendar</a>
-            </li>
-            <li>
-              <a href="#">Smart Consultation</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Bayi</a>
-          <ul>
-            <li>
-              <a href="#">Prakehamilan</a>
-            </li>
-            <li>
-              <a href="#">Persiapan Kehamilan</a>
-            </li>
-            <li>
-              <a href="#">Prakonsepsi</a>
-            </li>
-            <li>
-              <a href="#">Apakah Saya Hamil</a>
-            </li>
-            <li class="sub">
-              Bayi
-            </li>
-            <li>
-              <a href="#">Smart Ovulation Calendar</a>
-            </li>
-            <li>
-              <a href="#">Smart Nursery Calendar</a>
-            </li>
-            <li>
-              <a href="#">Smart Consultation</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Anak</a>
-          <ul>
-            <li>
-              <a href="#">Anak</a>
-            </li>
-            <li>
-              <a href="#">Persiapan Kehamilan</a>
-            </li>
-            <li>
-              <a href="#">Prakonsepsi</a>
-            </li>
-            <li>
-              <a href="#">Apakah Saya Hamil</a>
-            </li>
-            <li class="sub">
-              Pra-kehamilan
-            </li>
-            <li>
-              <a href="#">Smart Ovulation Calendar</a>
-            </li>
-            <li>
-              <a href="#">Smart Nursery Calendar</a>
-            </li>
-            <li>
-              <a href="#">Smart Consultation</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+      {{ page.primary_menu }}
 
       <div class="acc-info">
         <p>Join parenting club to get all benefit</p>

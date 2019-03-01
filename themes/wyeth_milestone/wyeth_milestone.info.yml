@@ -14,7 +14,8 @@ libraries-override:
 
 regions:
   primary_menu: 'Primary menu'
-  slidier: slidier
-  content: content
+  slider: Slider
+  content: Content
+  header: Header
   footer: Footer
   footer_menu: 'Footer menu'
