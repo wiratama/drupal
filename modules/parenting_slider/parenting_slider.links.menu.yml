@@ -1,0 +1,6 @@
+parenting_slider.admin:
+  title: 'parenting_slider module'
+  description: 'parenting_slider module'
+  parent: system.admin_config_development
+  route_name: parenting_slider.admin_settings_form 
+  weight: 100

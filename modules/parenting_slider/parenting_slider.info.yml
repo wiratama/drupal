@@ -1,0 +1,5 @@
+name: Parenting slider
+description: A Parenting slider module.
+core: 8.x
+package: Custom
+type: module
