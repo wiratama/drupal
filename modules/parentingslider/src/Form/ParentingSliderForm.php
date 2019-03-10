@@ -38,8 +38,8 @@ class ParentingSliderForm extends FormBase {
             '#options' => array(
                 '1' => t('Image'),
                 '2' => t('Youtube'),
-                '#default_value' => (isset($record['categories_id']) && $_GET['num']) ? $record['categories_id']:'',
             ),
+            '#default_value' => (isset($record['categories_id']) && $_GET['num']) ? $record['categories_id']:'',
         );
 
         $form['img_desktop'] = array(
@@ -129,14 +129,14 @@ class ParentingSliderForm extends FormBase {
             $file_usage->add($file, 'parentingslider', 'parentingslider', \Drupal::currentUser()->id());
 
             $img_desktop_fid = $file->id();
-        } else if ($field['img_desktop'] != 0 && $current_img_desktop) {
-            if ($current_img_desktop != $field['img_desktop']) {
-                // file_delete(file_load($current_img_desktop));
+        } else if ($current_img_desktop != $field['img_desktop']) {
+            if ($field['img_desktop'][0]) {
+                file_delete(file_load($current_img_desktop));
                 // $file = file_load($field['img_desktop']);
                 // $file->status = FILE_STATUS_PERMANENT;
                 // file_save($file);
                 
-                File::delete(File::load($current_img_desktop));
+                // File::delete(File::load($current_img_desktop));
                 $file = File::load($field['img_desktop'][0]);
                 $file->setPermanent();
                 $file->save();
