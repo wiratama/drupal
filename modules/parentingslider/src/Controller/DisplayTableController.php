@@ -31,8 +31,11 @@ class DisplayTableController extends ControllerBase {
         $results = $query->execute()->fetchAll();
         $rows=array();
         foreach($results as $data){
-            $delete = Url::fromUserInput('/parenting-slider/form/delete/'.$data->slider_id);
-            $edit   = Url::fromUserInput('/parenting-slider/form/parenting-slider?num='.$data->slider_id);
+            // $delete = Url::fromUserInput('/parenting-slider/form/delete/'.$data->slider_id);
+            // $edit   = Url::fromUserInput('/parenting-slider/form/parenting-slider?num='.$data->slider_id);
+
+            $delete = Url::fromUserInput('/admin/structure/parenting-slider/form/delete/'.$data->slider_id);
+            $edit   = Url::fromUserInput('/admin/structure/parenting-slider/form/parentingslider?num='.$data->slider_id);
 
             $rows[] = array(
                 'slider_id' =>$data->slider_id,
@@ -66,8 +69,8 @@ class DisplayTableController extends ControllerBase {
         $results = $query->execute()->fetchAll();
         $rows=array();
         foreach($results as $data){
-            $delete = Url::fromUserInput('/parenting-slider/form/delete/'.$data->slider_id);
-            $edit   = Url::fromUserInput('/parenting-slider/form/parenting-slider?num='.$data->slider_id);
+            $delete = Url::fromUserInput('/admin/structure/parenting-slider/form/delete/'.$data->slider_id);
+            $edit   = Url::fromUserInput('/admin/structure/parenting-slider/form/parentingslider?num='.$data->slider_id);
 
             $rows[] = array(
                 'slider_id' =>$data->slider_id,

@@ -16,8 +16,8 @@ class ParentingSliderForm extends FormBase {
         $conn = Database::getConnection();
         $record = array();
         if (isset($_GET['num'])) {
-            $query = $conn->select('parenting_sldier', 'm')
-                ->condition('id', $_GET['num'])
+            $query = $conn->select('parenting_slider', 'm')
+                ->condition('slider_id', $_GET['num'])
                 ->fields('m');
             $record = $query->execute()->fetchAssoc();
     
@@ -79,7 +79,7 @@ class ParentingSliderForm extends FormBase {
             $query = \Drupal::database();
             $query->update('parenting_slider')
                 ->fields($field)
-                ->condition('id', $_GET['num'])
+                ->condition('slider_id', $_GET['num'])
                 ->execute();
             drupal_set_message("succesfully updated");
             $form_state->setRedirect('parentingslider.content');
