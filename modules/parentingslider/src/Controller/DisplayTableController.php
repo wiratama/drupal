@@ -55,39 +55,4 @@ class DisplayTableController extends ControllerBase {
         return $form;
     
     }
-
-    public function display() {
-        $header_table = array(
-            'slider_id'=>    t('No'),
-            'title' => t('Title'),
-            'opt' => t('operations'),
-            'opt1' => t('operations'),
-        );
-        
-        $query = \Drupal::database()->select('parenting_slider', 'm');
-        $query->fields('m', ['slider_id','title']);
-        $results = $query->execute()->fetchAll();
-        $rows=array();
-        foreach($results as $data){
-            $delete = Url::fromUserInput('/admin/structure/parenting-slider/form/delete/'.$data->slider_id);
-            $edit   = Url::fromUserInput('/admin/structure/parenting-slider/form/parentingslider?num='.$data->slider_id);
-
-            $rows[] = array(
-                'slider_id' =>$data->slider_id,
-                'title' => $data->title,
-                \Drupal::l('Delete', $delete),
-                \Drupal::l('Edit', $edit),
-            );
-
-        }
-        
-        $form['table'] = array(
-            '#type' => 'table',
-            '#header' => $header_table,
-            '#rows' => $rows,
-            '#empty' => t('No data found'),
-        );
-        return $form;
-    
-    }
 }

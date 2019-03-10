@@ -1,0 +1,5 @@
+entity.parentingslider.add_form:
+  route_name: 'entity.parentingslider.add_form'
+  title: 'Add slider'
+  appears_on:
+    - parentingslider.content

@@ -20,7 +20,7 @@ class DeleteForm extends ConfirmFormBase {
     }
   
     public function getCancelUrl() {
-        return new Url('parentingslider.display_table_controller_display');
+        return new Url('parentingslider.content');
     }
     
     public function getDescription() {
@@ -48,14 +48,14 @@ class DeleteForm extends ConfirmFormBase {
     public function submitForm(array &$form, FormStateInterface $form_state) {
         $query = \Drupal::database();
         $query->delete('parenting_slider')
-            ->condition('id',$this->id)
+            ->condition('slider_id',$this->id)
             ->execute();
         if($query == TRUE){
             drupal_set_message("succesfully deleted");
         } else{
             drupal_set_message(" not succesfully deleted");
         }
-        $form_state->setRedirect('parentingslider.display_table_controller_display');
+        $form_state->setRedirect('parentingslider.content');
     }
     
 }
