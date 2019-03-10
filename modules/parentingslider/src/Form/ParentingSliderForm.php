@@ -82,7 +82,7 @@ class ParentingSliderForm extends FormBase {
                 ->condition('id', $_GET['num'])
                 ->execute();
             drupal_set_message("succesfully updated");
-            $form_state->setRedirect('parentingslider.display_table_controller_display');
+            $form_state->setRedirect('parentingslider.content');
         } else {
             $field  = array(
                 'title'   =>  $title,
@@ -93,8 +93,9 @@ class ParentingSliderForm extends FormBase {
                     ->fields($field)
                     ->execute();
             drupal_set_message("succesfully saved");
-            $response = new RedirectResponse("/parenting-slider/table");
-            $response->send();
+            // $response = new RedirectResponse("/parenting-slider/table");
+            // $response->send();
+            $form_state->setRedirect('parentingslider.content');
         }
     }
     
