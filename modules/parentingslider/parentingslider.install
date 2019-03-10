@@ -1,6 +1,6 @@
 <?php
 
-function parenting_slider_schema() {
+function parentingslider_schema() {
   $schema['parenting_slider'] = array(
     'fields' => array(
       'slider_id'=>array(

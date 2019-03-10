@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\parenting_slider\Plugin\Block;
+namespace Drupal\parentingslider\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 

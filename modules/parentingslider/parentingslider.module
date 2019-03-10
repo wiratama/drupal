@@ -1,9 +1,9 @@
 <?php
 use Drupal\Core\Routing\RouteMatchInterface;
 
-function parenting_slider_help($route_name, RouteMatchInterface $route_match) {
+function parentingslider_help($route_name, RouteMatchInterface $route_match) {
     switch ($route_name) {
-        case 'help.page.parenting_slider':
+        case 'help.page.parentingslider':
             $output = '';
             $output .= '<h3>' . t('About') . '</h3>';
             $output .= '<p>' . t('This dispaly information what you enter your application.') . '</p>';
@@ -13,9 +13,9 @@ function parenting_slider_help($route_name, RouteMatchInterface $route_match) {
     }
 }
 
-function parenting_slider_theme() {
+function parentingslider_theme() {
     return [
-        'parenting_slider_description' => [
+        'parentingslider_description' => [
             'template' => 'description',
             'variables' => [],
         ],

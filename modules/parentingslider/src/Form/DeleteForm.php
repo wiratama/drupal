@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\parenting_slider\Form;
+namespace Drupal\parentingslider\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -10,7 +10,7 @@ use Drupal\Core\Render\Element;
 
 class DeleteForm extends ConfirmFormBase {
     public function getFormId() {
-        return 'parenting_slider_delete_form';
+        return 'parentingslider_delete_form';
     }
 
     public $cid;
@@ -20,7 +20,7 @@ class DeleteForm extends ConfirmFormBase {
     }
   
     public function getCancelUrl() {
-        return new Url('parenting_slider.display_table_controller_display');
+        return new Url('parentingslider.display_table_controller_display');
     }
     
     public function getDescription() {
@@ -55,7 +55,7 @@ class DeleteForm extends ConfirmFormBase {
         } else{
             drupal_set_message(" not succesfully deleted");
         }
-        $form_state->setRedirect('parenting_slider.display_table_controller_display');
+        $form_state->setRedirect('parentingslider.display_table_controller_display');
     }
     
 }

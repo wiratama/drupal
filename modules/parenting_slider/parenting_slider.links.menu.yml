@@ -1,6 +1,0 @@
-parenting_slider.content:
-  title: 'parenting_slider module'
-  description: 'parenting_slider module'
-  parent: system.admin_structure
-  route_name: parenting_slider.content
-  weight: 99
